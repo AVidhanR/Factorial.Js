@@ -18,12 +18,14 @@
       const calFactorial = () => {
         number = parseInt(prompt("Enter any number (>=0) : "));
         factorial = 1;
-        if ((number == 0 || number == 1) && number > -1) {
+        if (number == 0 || number == 1) {
           alert(`The factorial of ${number} is ${factorial}`);
-        } else {
-          for (i = 1; i <= number; i++) {
-            factorial = factorial * i;
-          }
+        } else { 
+            if ( number > -1) {
+              for (i = 1; i <= number; i++) {
+                factorial = factorial * i;
+              }
+            } else alert(`Enter valid number`);
           alert(`The factorial of ${number} is ${factorial}`);
         }
       };
